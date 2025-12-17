@@ -11,5 +11,11 @@ INSERT INTO Ingredient (id, name, price, category, id_dish) VALUES
 (3, 'Poulet', 4500.00, 'ANIMAL', 2),
 (4, 'Chocolat', 3000.00, 'OTHER', 4),
 (5, 'Beurre', 2500.00, 'DAIRY', 4);
-select setval(pg_get_serial_sequence('Dish','id')),
-       (select max())
+
+
+SELECT setval( pg_get_serial_sequence('Dish', 'id'),
+               (SELECT MAX(id) FROM Dish));
+
+SELECT setval(pg_get_serial_sequence('Ingredient','id'),
+              (SELECT max(id) FROM Ingredient));
+
