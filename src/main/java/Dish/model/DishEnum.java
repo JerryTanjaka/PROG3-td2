@@ -1,6 +1,6 @@
 package Dish.model;
 
-public enum dishType {
+public enum DishEnum {
         START,
         MAIN,
         DESSERT

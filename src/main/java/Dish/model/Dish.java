@@ -5,21 +5,27 @@ import java.util.List;
 public class Dish {
     private int id;
     private String name;
-    private dishType dishType;
+    private DishEnum dishType;
     private List<Ingredients> ingredients;
 
-    public Dish(dishType dishType, int id, List<Ingredients> ingredients, String name) {
+    double getDishPrice(){
+        return ingredients.stream()
+                .mapToDouble(Ingredients::getPrice)
+                .sum();
+    }
+
+    public Dish(DishEnum dishType, int id, List<Ingredients> ingredients, String name) {
         this.dishType = dishType;
         this.id = id;
         this.ingredients = ingredients;
         this.name = name;
     }
 
-    public dishType getDishType() {
+    public DishEnum getDishType() {
         return dishType;
     }
 
-    public void setDishType(dishType dishType) {
+    public void setDishType(DishEnum dishType) {
         this.dishType = dishType;
     }
 
