@@ -1,10 +1,12 @@
-package Dish.DAO;
+package school.hei.prog3td2.DAO;
 
-import Dish.Util.DBConnection;
-import Dish.model.CategoryEnum;
-import Dish.model.Dish;
-import Dish.model.DishEnum;
-import Dish.model.Ingredient;
+
+import school.hei.prog3td2.model.CategoryEnum;
+import school.hei.prog3td2.model.Dish;
+import school.hei.prog3td2.model.DishEnum;
+import school.hei.prog3td2.model.Ingredient;
+import school.hei.prog3td2.util.DBConnection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

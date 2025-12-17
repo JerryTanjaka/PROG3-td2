@@ -1,6 +1,6 @@
-package Dish;
+package school.hei.prog3td2;
 
-import Dish.DAO.DataRetriever;
+import school.hei.prog3td2.DAO.DataRetriever;
 import java.sql.SQLException;
 
 public class Main {

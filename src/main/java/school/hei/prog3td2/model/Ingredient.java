@@ -1,4 +1,4 @@
-package Dish.model;
+package school.hei.prog3td2.model;
 
 public class Ingredient {
     private int id;

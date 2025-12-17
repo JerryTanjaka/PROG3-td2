@@ -1,4 +1,4 @@
-package Dish.model;
+package school.hei.prog3td2.model;
 
 import java.util.List;
 
