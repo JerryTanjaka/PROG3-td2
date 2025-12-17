@@ -1,9 +1,6 @@
 package Dish;
 
 import Dish.DAO.DataRetriever;
-import Dish.Util.DBConnection;
-
-import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Main {
