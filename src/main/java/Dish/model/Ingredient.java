@@ -1,16 +1,17 @@
 package Dish.model;
 
-public class Ingredients {
+public class Ingredient {
     private int id;
     private String name;
     private Double price;
     private CategoryEnum categoryEnum;
     private Dish dish;
     public String getDishName (){
-        return dish.getName();
+
+        return dish == null ? null :dish.getName();
     }
 
-    public Ingredients(CategoryEnum categoryEnum, Dish dish, int id, String name, Double price) {
+    public Ingredient(int id,String name,Double price,CategoryEnum categoryEnum, Dish dish  ) {
         this.categoryEnum = categoryEnum;
         this.dish = dish;
         this.id = id;
@@ -65,7 +66,7 @@ public class Ingredients {
                 ", id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", dish=" + dish +
+                ", dishName=" + getDishName() +
                 '}';
     }
 }

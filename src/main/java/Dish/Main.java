@@ -1,12 +1,14 @@
 package Dish;
 
+import Dish.DAO.DataRetriever;
 import Dish.Util.DBConnection;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        DBConnection dbConnection  = new DBConnection();
-        dbConnection.getDBConnection();
+        DataRetriever dataRetriever = new DataRetriever();
+        System.out.println(dataRetriever.findDishById(1));
     }
 }

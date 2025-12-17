@@ -6,15 +6,15 @@ public class Dish {
     private int id;
     private String name;
     private DishEnum dishType;
-    private List<Ingredients> ingredients;
+    private List<Ingredient> ingredients;
 
     double getDishPrice(){
         return ingredients.stream()
-                .mapToDouble(Ingredients::getPrice)
+                .mapToDouble(Ingredient::getPrice)
                 .sum();
     }
 
-    public Dish(DishEnum dishType, int id, List<Ingredients> ingredients, String name) {
+    public Dish(int id, String name,DishEnum dishType,  List<Ingredient> ingredients) {
         this.dishType = dishType;
         this.id = id;
         this.ingredients = ingredients;
@@ -37,11 +37,11 @@ public class Dish {
         this.id = id;
     }
 
-    public List<Ingredients> getIngredients() {
+    public List<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<Ingredients> ingredients) {
+    public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 
